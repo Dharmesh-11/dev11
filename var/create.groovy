@@ -1,4 +1,4 @@
-def call() {
-    echo "creating folder in my job"
-    sh 'mkdir -p my-folder'
+def call(String folderName) {
+    sh "mkdir -p ${folderName}"
+    echo "Folder ${folderName} created"
 }
