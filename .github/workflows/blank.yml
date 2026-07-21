@@ -8,13 +8,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Create a file
+      - name: Create file
         run: |
-          echo "Hello, GitHub Actions!" > sample.txt
-          echo "This file was created on $(date)" >> sample.txt
+          echo "Hello GitHub Actions" > sample.txt
+          pwd
+          ls -la
 
-      - name: Display file content
-        run: cat sample.txt.
+      - name: Display file
+        run: |
+          pwd
+          ls -la
+          cat sample.txt
