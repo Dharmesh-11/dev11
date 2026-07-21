@@ -10,14 +10,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Create file
+      - name: Create a file
         run: |
-          touch sample.txt
-          pwd
-          ls -la
+          echo "Hello, GitHub Actions!" > sample.txt
+          echo "This file was created on $(date)" >> sample.txt
 
-      - name: Display file
-        run: |
-          pwd
-          ls -la
-          cat sample.txt
+      - name: Display file content
+        run: cat sample.txt
